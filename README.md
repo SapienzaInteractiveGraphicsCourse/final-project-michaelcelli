@@ -7,3 +7,4 @@
 - use the space bar to jump and avoid meteorites that are placed on the mars surface
 
 ### Play the game here:
+https://sapienzainteractivegraphicscourse.github.io/final-project-michaelcelli/
