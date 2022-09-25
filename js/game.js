@@ -107,12 +107,12 @@ class Game {
     }
 
     _setUpSounds() {
-        this.bg = new Audio('../audio/music_background.wav');
+        this.bg = new Audio('audio/music_background.wav');
         this.bg.volume = 0.6;
         this.bg.loop = true;
-        this.exp = new Audio('../audio/explosion_player.wav');
+        this.exp = new Audio('audio/explosion_player.wav');
         this.exp.volume = 0.3;
-        this.go = new Audio('../audio/game_over.mp3');
+        this.go = new Audio('audio/game_over.mp3');
         this.go.volume = 0.6;
     }
 
@@ -552,7 +552,7 @@ class Game {
         this.objectsParent = new THREE.Group();
         this.obstaclesArray = new Array();
 
-        this.mars = this.gltfModelLoad('../models/mars/scene.gltf', true, false);
+        this.mars = this.gltfModelLoad('models/mars/scene.gltf', true, false);
         Promise.resolve(this.mars).then((data) => {
             this.mars = data;
             this.mars.scale.set(45, 45, 45);
@@ -562,7 +562,7 @@ class Game {
             this.mars.attach(this.objectsParent);
         });
 
-        this.astronaut = this.gltfModelLoad('../models/astronaut/scene.gltf', true, true);
+        this.astronaut = this.gltfModelLoad('models/astronaut/scene.gltf', true, true);
         Promise.resolve(this.astronaut).then((data) => {
             this.astronaut = data;
             this.spine = this.astronaut.getObjectByName("Spine_16_9");
@@ -601,7 +601,7 @@ class Game {
             this._createAstronautCollider(this.astronaut);
         });
 
-        this.rover = this.gltfModelLoad('../models/rover/scene.gltf', true, true);
+        this.rover = this.gltfModelLoad('models/rover/scene.gltf', true, true);
         Promise.resolve(this.rover).then((data) => {
             this.rover = data;
             this.rightBackWheel = this.rover.getObjectByName("LeftMechanicalArmFrontWell004_23");
@@ -619,7 +619,7 @@ class Game {
             this.rover.rotateZ(8 * Math.PI / 180);
         });
 
-        this.meteorite = this.gltfModelLoad('../models/island_meteorite/scene.gltf', true, true);
+        this.meteorite = this.gltfModelLoad('models/island_meteorite/scene.gltf', true, true);
         Promise.resolve(this.meteorite).then((data) => {
             this.meteorite = data;
             this.meteorite.scale.set(0.02, 0.03, 0.04);
@@ -629,8 +629,8 @@ class Game {
 
         const mercuryGeometry = new THREE.SphereGeometry(5, 100, 100);
         const mercuryMaterial = new THREE.MeshStandardMaterial({
-            map: new THREE.TextureLoader().load("../images/mercurymap.jpg"),
-            bumpMap: new THREE.TextureLoader().load("../images/mercurybump.jpg"),
+            map: new THREE.TextureLoader().load("images/mercurymap.jpg"),
+            bumpMap: new THREE.TextureLoader().load("images/mercurybump.jpg"),
             bumpScale: 0.015
         });
         this.mercuryMesh = new THREE.Mesh(mercuryGeometry, mercuryMaterial);
@@ -639,8 +639,8 @@ class Game {
 
         const earthGeometry = new THREE.SphereGeometry(5, 100, 100);
         const earthMaterial = new THREE.MeshStandardMaterial({
-            map: new THREE.TextureLoader().load("../images/earth.jpeg"),
-            normalMap: new THREE.TextureLoader().load("../images/earth_normalmap.jpg"),
+            map: new THREE.TextureLoader().load("images/earth.jpeg"),
+            normalMap: new THREE.TextureLoader().load("images/earth_normalmap.jpg"),
         });
         this.earthMesh = new THREE.Mesh(earthGeometry, earthMaterial);
         this.earthMesh.position.z = -80;
@@ -662,7 +662,7 @@ class Game {
         //Ambient light
         this.lightAmbient = new THREE.AmbientLight(0xffffff, 1); // white light
 
-        this.starsBackground = new THREE.TextureLoader().load("../images/stars_milky_way.jpeg");
+        this.starsBackground = new THREE.TextureLoader().load("images/stars_milky_way.jpeg");
     }
 
     gltfModelLoad(gltfFile, receive, cast) {

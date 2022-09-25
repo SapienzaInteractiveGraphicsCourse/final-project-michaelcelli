@@ -18,8 +18,8 @@ function startMainScene(difficulty) {
     '<div id="scoreboard">' +
     '<div id="health">Astronaut Health: 100</div>' +
     '<div id="score">Score: 0</div>' +
-    '<img id="audio_image" src="../images/audio_on.png"/>' +
-    '<img id="audioMute_image" src="../images/audio_off.png"/>'+
+    '<img id="audio_image" src="images/audio_on.png"/>' +
+    '<img id="audioMute_image" src="images/audio_off.png"/>'+
     '</div>'+
     '<div id="gameover"></div>'
 
