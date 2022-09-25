@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang=”en”>
-<head>    
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IG Final Project</title>
+    <title>Celli 1968299 Final Project</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"
+        integrity="sha512-lIKG1kC5TMb1Zx32vdz1n31YJMZRknVY20U9MJ28hD3y2c0OKN0Ce5NhJji78v8zX5UOSsm+MTBOcJt7yMBnSg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/three@0.124.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/three@0.124.0/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
 </head>
+
 <body>
-    <script type="module" src="./js/main.js"></script>
+    <style>
+        body {
+            background-image: url('./images/start_image.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+
+    <h1 id="title" class="center">SURVIVE ON MARS</h1>
+    <div class="center" id="options-difficulty">
+        <div id="title-select">Select difficulty:</div>
+        <div><input type="radio" id="easy" name="difficulty" value="0">
+            <label for="easy">Easy</label>
+        </div>
+        <div>
+            <input type="radio" id="normal" name="difficulty" value="2" checked>
+            <label for="normal">Normal</label>
+        </div>
+        <div>
+            <input type="radio" id="hard" name="difficulty" value="4">
+            <label for="hard">Hard</label>
+        </div>
+    </div>
+
+    <div id="play" class="center">
+        <img id="playbutton" src="./images/playnow.png" height="60%" width="60%" />
+        <div id="how-to-play-title">How to play:</div>
+        <div class="how-to-play">Use the <code>left</code> &#8592 and <code>right</code> &#8594 arrows to move the astronaut.</div>
+        <div class="how-to-play">Use the <code>space bar</code> &#9251 to jump and avoid meteorites.</div>
+        <div class="how-to-play">The astronaut will run automatically.</div>
+    </div>
+
 </body>
+
 </html>

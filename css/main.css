@@ -1,3 +1,110 @@
-body {
-    margin: 0;
-  }
+html, body 
+{ 
+	margin: 0; 
+	width: 100%; 
+	height: 100%; 
+	overflow: hidden;
+	font-family: Roboto,sans-serif;
+}
+
+#play{
+	position: absolute;
+	background-color: transparent;
+	outline: none;
+	background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+	margin: 0;
+	position: absolute;
+	visibility: visible;
+	top: 80%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#scoreboard {
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	z-index: 100;
+	font-size: 20px;
+	background-color: transparent;
+	display: inline-block;
+	color: white;
+	margin-left: 10px;
+	visibility: hidden;
+}   
+
+#gameover {
+	z-index: 100;
+	color: white;
+	font-size: 100px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#title {
+	color: #e77d11;
+	font-size: 60px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 63px;
+	text-shadow: 0 0 4px hsla(8, 89%, 14%,0.56);
+	text-transform: uppercase;
+}
+
+#options-difficulty {
+	color: #f0e7e7;
+	text-shadow: 0 0 4px hsla(8, 89%, 14%, 0.56);
+	line-height: 38px;
+	font-size: 22px;
+}
+
+#title-select{
+	font-size: 28px;
+	line-height: 38px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+#how-to-play-title{
+	color: #f0e7e7;
+	text-shadow: 0 0 4px hsla(8, 89%, 14%, 0.56);
+	margin-top:60px;
+	font-size: 20px;
+}
+
+.how-to-play{
+	color: #f0e7e7;
+	text-shadow: 0 0 4px hsla(8, 89%, 14%, 0.56);
+	font-size: 16px;
+	max-width: 600px;
+}
+
+.center {
+	text-align: center;
+}
+
+#audio_image {
+	position: absolute;
+	width: 35px;
+	margin-top: 1%;
+	cursor: pointer;
+	visibility: hidden;	
+}
+
+#audioMute_image {
+	position: absolute;
+	width: 35px;
+	margin-top: 1%;
+	cursor: pointer;
+	visibility: hidden;	
+}
